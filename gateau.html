@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recettes Gâteaux</title>
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+.feed {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.video {
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.play {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: white;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="feed">
+
+  <!-- VIDEO 1 -->
+  <div class="video">
+    <div class="cover" onclick="play(this, 'https://www.youtube.com/embed/idelNhoT8pI?autoplay=1&mute=0')"
+      style="background-image:url('https://img.youtube.com/vi/5z2q9FqGq8Q/maxresdefault.jpg')">
+      <div class="play">▶</div>
+    </div>
+  </div>
+
+  <!-- VIDEO 2 -->
+  <div class="video">
+    <div class="cover" onclick="play(this, 'https://www.youtube.com/embed/FHPu3iyLmxw?autoplay=1&mute=0')"
+      style="background-image:url('https://img.youtube.com/vi/dF7n7A1FZP0/maxresdefault.jpg')">
+      <div class="play">▶</div>
+    </div>
+  </div>
+  
+  <!-- VIDEO 3 -->
+  <div class="video">
+    <div class="cover" onclick="play(this, 'https://www.youtube.com/embed/_lw79oDt7SI?autoplay=1&mute=0')"
+      style="background-image:url('https://img.youtube.com/vi/dF7n7A1FZP0/maxresdefault.jpg')">
+      <div class="play">▶</div>
+    </div>
+  </div>
+  
+  <!-- VIDEO 4 -->
+  <div class="video">
+    <div class="cover" onclick="play(this, 'https://www.youtube.com/embed/Wrp2eTHe9Ys?autoplay=1&mute=0')"
+      style="background-image:url('https://img.youtube.com/vi/dF7n7A1FZP0/maxresdefault.jpg')">
+      <div class="play">▶</div>
+    </div>
+  </div>
+
+<!-- VIDEO 5 -->
+  <div class="video">
+    <div class="cover" onclick="play(this, 'https://www.youtube.com/embed/_CS3gw1ha7Q?autoplay=1&mute=0')"
+      style="background-image:url('https://img.youtube.com/vi/dF7n7A1FZP0/maxresdefault.jpg')">
+      <div class="play">▶</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function play(el, src) {
+  el.outerHTML = `<iframe src="${src}" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+}
+</script>
+
+</body>
+</html>
